@@ -3,28 +3,21 @@ package IntroduceNullObject.after;
 public class ExampleClass {
 
     public void fooMethod(){
-        Customer customer = new Customer();
+        Site site = new Site();
+        Customer customer = site.getCustomer();
 
         BillingPlan plan;
-        if(customer == null){
-            plan = BillingPlan.basic();
-        }else{
-            plan = customer.getPlan();
-        }
+        if(customer.isNull()) plan = BillingPlan.basic();
+        else plan = customer.getPlan();
 
         String customerName;
-        if(customer == null){
-            customerName = "occupant";
-        }else{
-            customerName = customer.getName();
-        }
+        if(customer.isNull()) customerName = "occupant";
+        else customerName = customer.getName();
 
         int weeksDelinquent;
-        if(customer == null){
-            weeksDelinquent = 0;
-        }else{
-            weeksDelinquent = customer.getHistory().getWeeksDelinquentInLastYear();
-        }
+        if(customer.isNull()) weeksDelinquent = 0;
+        else weeksDelinquent = customer.getHistory().getWeeksDelinquentInLastYear();
+
     }
 
 

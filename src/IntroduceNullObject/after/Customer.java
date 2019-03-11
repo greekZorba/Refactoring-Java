@@ -1,6 +1,6 @@
 package IntroduceNullObject.after;
 
-public class Customer {
+public class Customer implements Nullable{
 
     public String getName(){
         return "";
@@ -14,12 +14,16 @@ public class Customer {
         return new PaymentHistory();
     }
 
-    class NullCustomer extends Customer{
-
-        public boolean isNull(){
-            return true;
-        }
-
+    public boolean isNull() {
+        return false;
     }
+
+    static Customer newNull() {
+        return new NullCustomer();
+    }
+
+    protected Customer() {} // NullCustomer가 사용
+
+
 
 }
