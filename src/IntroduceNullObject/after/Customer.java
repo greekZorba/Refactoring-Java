@@ -2,6 +2,8 @@ package IntroduceNullObject.after;
 
 public class Customer implements Nullable{
 
+    private BillingPlan billingPlan;
+
     public String getName(){
         return "";
     }
@@ -12,6 +14,10 @@ public class Customer implements Nullable{
 
     public PaymentHistory getHistory(){
         return new PaymentHistory();
+    }
+
+    public void setPlan(BillingPlan billingPlan){
+        this.billingPlan = billingPlan;
     }
 
     public boolean isNull() {

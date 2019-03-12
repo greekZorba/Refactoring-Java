@@ -25,6 +25,7 @@ public class ExampleClass {
         }else{
             weeksDelinquent = customer.getHistory().getWeeksDelinquentInLastYear();
         }
+
     }
 
 

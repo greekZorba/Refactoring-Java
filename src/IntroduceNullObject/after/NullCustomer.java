@@ -6,4 +6,14 @@ public class NullCustomer extends Customer {
         return true;
     }
 
+    public String getName() {
+        return "occupant";
+    }
+
+    public void setPlan(BillingPlan arg){}
+
+    public PaymentHistory getHistory() {
+        return PaymentHistory.newNull();
+    }
+
 }
