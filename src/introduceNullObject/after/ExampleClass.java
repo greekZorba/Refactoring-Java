@@ -1,4 +1,4 @@
-package IntroduceNullObject.after;
+package introduceNullObject.after;
 
 public class ExampleClass {
 
@@ -16,16 +16,17 @@ public class ExampleClass {
         if(customer.isNull()) weeksDelinquent = 0;
         else weeksDelinquent = customer.getHistory().getWeeksDelinquentInLastYear();
 
-        //바로 위의 메서드를 아래와 같이 변경할 수 있음
+        //upper method can be changed like this method
         weeksDelinquent = customer.getHistory().getWeeksDelinquentInLastYear();
-        System.out.println("null 일 때 weeksDelinquent 값은 0이어야 함 :" + weeksDelinquent);
+        System.out.println("if customer is null, weeksDelinquent should be 0 : " + weeksDelinquent);
 
 
         if(!customer.isNull()){
             customer.setPlan(BillingPlan.special());
         }
 
-        // 바로 위의 메서드를 아래와 같이 변경할 수 있음
+        // upper method can be changed like this method
+        // NullCustomer has setPlan method but doesn't have any logic
         customer.setPlan(BillingPlan.special());
 
     }

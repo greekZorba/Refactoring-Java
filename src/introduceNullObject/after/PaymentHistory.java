@@ -1,4 +1,4 @@
-package IntroduceNullObject.after;
+package introduceNullObject.after;
 
 public class PaymentHistory {
 

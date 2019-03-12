@@ -1,4 +1,4 @@
-package IntroduceNullObject.before;
+package introduceNullObject.before;
 
 public class ExampleClass {
 

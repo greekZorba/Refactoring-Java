@@ -1,4 +1,4 @@
-package IntroduceNullObject.after;
+package introduceNullObject.after;
 
 public class Customer implements Nullable{
 
@@ -28,7 +28,7 @@ public class Customer implements Nullable{
         return new NullCustomer();
     }
 
-    protected Customer() {} // NullCustomer가 사용
+    protected Customer() {} // NullCustomer will use this constructor
 
 
 
