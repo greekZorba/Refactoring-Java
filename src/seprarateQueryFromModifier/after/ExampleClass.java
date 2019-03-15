@@ -7,7 +7,7 @@ package seprarateQueryFromModifier.after;
 public class ExampleClass {
 
     void checkSecurity(String[] people) {
-        foundMiscreant(people);
+        sendAlert(people);
         String found = foundPerson(people);
         someLaterCode(found);
     }
@@ -15,7 +15,7 @@ public class ExampleClass {
     /**
      * 상태 변경을 하는 메서드
      * */
-    void foundMiscreant(String[] people) {
+    void sendAlert(String[] people) {
         if(! foundPerson(people).equals("")) {
             sendAlert();
         }
